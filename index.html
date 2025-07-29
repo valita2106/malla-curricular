@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva - Medicina Veterinaria</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <h1>Malla Curricular Interactiva</h1>
+        <p>Medicina Veterinaria</p>
+        <button id="resetearBtn">Limpiar Progreso</button>
+    </header>
+    
+    <main id="malla">
+        <div class="semestre">
+            <h2>Semestre I</h2>
+            <div class="ramo" id="intro-vet" data-nombre="Introduccion a las ciencias veterinarias y la vida universitaria" data-requisitos="">Introduccion a las ciencias veterinarias y la vida universitaria</div>
+            <div class="ramo" id="quimica" data-nombre="Fundamentos de la química" data-requisitos="">Fundamentos de la química</div>
+            <div class="ramo" id="biologia" data-nombre="Biología celular y molecular" data-requisitos="">Biología celular y molecular</div>
+            <div class="ramo" id="matematica" data-nombre="Matemática" data-requisitos="">Matemática</div>
+            <div class="ramo" id="zoologia" data-nombre="Zoología" data-requisitos="">Zoología</div>
+            <div class="ramo" id="fisica" data-nombre="Fundamento de la física" data-requisitos="">Fundamento de la física</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre II</h2>
+            <div class="ramo" id="anatomia-1" data-nombre="Anatomía animal l" data-requisitos="">Anatomía animal l</div>
+            <div class="ramo" id="praderas" data-nombre="Praderas y especies forrajeras" data-requisitos="">Praderas y especies forrajeras</div>
+            <div class="ramo" id="bioquimica" data-nombre="Fundamentos de bioquímica" data-requisitos="quimica">Fundamentos de bioquímica</div>
+            <div class="ramo" id="histoembriologia" data-nombre="Histoembriología veterinaria" data-requisitos="biologia">Histoembriología veterinaria</div>
+            <div class="ramo" id="ecologia" data-nombre="Ecología" data-requisitos="matematica">Ecología</div>
+            <div class="ramo" id="electivo-1" data-nombre="Electivo I" data-requisitos="">Electivo I</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre III</h2>
+            <div class="ramo" id="anatomia-2" data-nombre="Anatomía animal ll" data-requisitos="anatomia-1">Anatomía animal ll</div>
+            <div class="ramo" id="nutricion" data-nombre="Nutrición y alimentación animal" data-requisitos="praderas">Nutrición y alimentación animal</div>
+            <div class="ramo" id="fisiologia" data-nombre="Fisiología veterinaria" data-requisitos="anatomia-1">Fisiología veterinaria</div>
+            <div class="ramo" id="practica-inicial" data-nombre="Práctica inicial" data-requisitos="intro-vet">Práctica inicial</div>
+            <div class="ramo" id="inmunologia" data-nombre="Inmunología general" data-requisitos="bioquimica">Inmunología general</div>
+            <div class="ramo" id="estadistica" data-nombre="Estadistíca" data-requisitos="histoembriologia">Estadistíca</div>
+            <div class="ramo" id="electivo-2" data-nombre="Electivo II" data-requisitos="electivo-1">Electivo II</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IV</h2>
+            <div class="ramo" id="etologia" data-nombre="Etología y bienestar animal" data-requisitos="anatomia-2,fisiologia">Etología y bienestar animal</div>
+            <div class="ramo" id="histopatologia" data-nombre="Histopatología" data-requisitos="anatomia-2,fisiologia">Histopatología</div>
+            <div class="ramo" id="microbiologia" data-nombre="Microbiología veterinaria" data-requisitos="anatomia-2,fisiologia">Microbiología veterinaria</div>
+            <div class="ramo" id="conservacion" data-nombre="Conservación de fauna silvestre" data-requisitos="">Conservación de fauna silvestre</div>
+            <div class="ramo" id="metodos-investigacion" data-nombre="Métodos de investigación en salud" data-requisitos="inmunologia">Métodos de investigación en salud</div>
+            <div class="ramo" id="electivo-3" data-nombre="Electivo III" data-requisitos="electivo-2">Electivo III</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre V</h2>
+            <div class="ramo" id="genetica" data-nombre="Genética en ciencias veterinarias" data-requisitos="">Genética en ciencias veterinarias</div>
+            <div class="ramo" id="epidemiologia" data-nombre="Epidemiología veterinaria" data-requisitos="">Epidemiología veterinaria</div>
+            <div class="ramo" id="fisiopatologia" data-nombre="Fisiopatología veterinaria" data-requisitos="microbiologia,histopatologia,etologia">Fisiopatología veterinaria</div>
+            <div class="ramo" id="gestion-ambiental" data-nombre="Gestión ambiental y desarrollo sustentable" data-requisitos="conservacion">Gestión ambiental y desarrollo sustentable</div>
+            <div class="ramo" id="gestion-contable" data-nombre="Gestión contable y financiera" data-requisitos="metodos-investigacion">Gestión contable y financiera</div>
+            <div class="ramo" id="electivo-4" data-nombre="Electivo IV" data-requisitos="electivo-3">Electivo IV</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VI</h2>
+            <div class="ramo" id="semiologia" data-nombre="Semiología veterinaria" data-requisitos="fisiopatologia">Semiología veterinaria</div>
+            <div class="ramo" id="reproduccion" data-nombre="Reproducción animal" data-requisitos="fisiopatologia">Reproducción animal</div>
+            <div class="ramo" id="anatomia-patologica" data-nombre="Anatomía patológica" data-requisitos="fisiopatologia">Anatomía patológica</div>
+            <div class="ramo" id="microbiologia-alimentos" data-nombre="Microbiología de los alimentos" data-requisitos="epidemiologia">Microbiología de los alimentos</div>
+            <div class="ramo" id="practica-intermedia" data-nombre="Práctica intermedia" data-requisitos="practica-inicial">Práctica intermedia</div>
+            <div class="ramo" id="electivo-5" data-nombre="Electivo V" data-requisitos="electivo-4">Electivo V</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VII</h2>
+            <div class="ramo" id="sistemas-produccion" data-nombre="Sistemas de producción animal" data-requisitos="genetica">Sistemas de producción animal</div>
+            <div class="ramo" id="farmacologia" data-nombre="Farmacología veterinaria" data-requisitos="semiologia,reproduccion,anatomia-patologica">Farmacología veterinaria</div>
+            <div class="ramo" id="enfermedades-1" data-nombre="Enfermedades producidas por agentes biologicos l" data-requisitos="semiologia,reproduccion,anatomia-patologica">Enfermedades producidas por agentes biologicos l</div>
+            <div class="ramo" id="procedimientos-clinicos" data-nombre="Procedimientos clínicos" data-requisitos="semiologia,reproduccion,anatomia-patologica">Procedimientos clínicos</div>
+            <div class="ramo" id="imagenologia" data-nombre="Imagenología" data-requisitos="semiologia,reproduccion,anatomia-patologica">Imagenología</div>
+            <div class="ramo" id="ia-salud" data-nombre="Inteligencia Artificial Aplicada a la Salud" data-requisitos="practica-intermedia">Inteligencia Artificial Aplicada a la Salud</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VIII</h2>
+            <div class="ramo" id="lab-clinico" data-nombre="Laboratorio clínico y biotecnología" data-requisitos="farmacologia,enfermedades-1,procedimientos-clinicos,imagenologia">Laboratorio clínico y biotecnología</div>
+            <div class="ramo" id="investigacion-vet" data-nombre="Investigación de ciencias veterinarias" data-requisitos="ia-salud">Investigación de ciencias veterinarias</div>
+            <div class="ramo" id="enfermedades-2" data-nombre="Enfermedades producidas por agentes biologicos ll" data-requisitos="farmacologia,enfermedades-1,procedimientos-clinicos,imagenologia">Enfermedades producidas por agentes biologicos ll</div>
+            <div class="ramo" id="cirugia-anestesia" data-nombre="Principios de cirugía y anestesiología" data-requisitos="farmacologia,enfermedades-1,procedimientos-clinicos,imagenologia">Principios de cirugía y anestesiología</div>
+            <div class="ramo" id="medicina-interna" data-nombre="Medicina interna" data-requisitos="farmacologia,enfermedades-1,procedimientos-clinicos,imagenologia">Medicina interna</div>
+            <div class="ramo" id="bioetica" data-nombre="Bioética" data-requisitos="gestion-contable">Bioética</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IX</h2>
+            <div class="ramo" id="salud-publica" data-nombre="Salud pública veterinaria" data-requisitos="">Salud pública veterinaria</div>
+            <div class="ramo" id="unidad-investigacion-1" data-nombre="Unidad de investigación l" data-requisitos="investigacion-vet">Unidad de investigación l</div>
+            <div class="ramo" id="internado-pequenos-1" data-nombre="Internado de pequeños animales l" data-requisitos="lab-clinico,enfermedades-2,cirugia-anestesia,medicina-interna">Internado de pequeños animales l</div>
+            <div class="ramo" id="internado-mayores-1" data-nombre="Internado de animales mayores l" data-requisitos="lab-clinico,enfermedades-2,cirugia-anestesia,medicina-interna">Internado de animales mayores l</div>
+            <div class="ramo" id="formulacion-proyectos" data-nombre="Formulación y evalución de proyectos veterinarios" data-requisitos="investigacion-vet">Formulación y evaluación de proyectos</div>
+            <div class="ramo" id="gestion-vet" data-nombre="Gestión veterinaria" data-requisitos="investigacion-vet">Gestión veterinaria</div>
+            <div class="ramo" id="practica-profesional" data-nombre="Practica profesional" data-requisitos="investigacion-vet">Practica profesional</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre X</h2>
+            <div class="ramo" id="una-salud" data-nombre="Una salud" data-requisitos="salud-publica">Una salud</div>
+            <div class="ramo" id="unidad-investigacion-2" data-nombre="Unidad de investigación ll" data-requisitos="unidad-investigacion-1,formulacion-proyectos,gestion-vet,practica-profesional">Unidad de investigación ll</div>
+            <div class="ramo" id="internado-electivo" data-nombre="Internado electivo" data-requisitos="">Internado electivo</div>
+            <div class="ramo" id="orientacion-profesional" data-nombre="Orientación profesional y ética en medicina veterinaria" data-requisitos="unidad-investigacion-1,formulacion-proyectos,gestion-vet,practica-profesional">Orientación profesional y ética</div>
+        </div>
+
+    </main>
+
+    <div id="modal-requisitos" class="modal-oculto">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h3>Requisitos pendientes</h3>
+            <p>Para aprobar este ramo, primero debes aprobar:</p>
+            <ul id="lista-requisitos"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
